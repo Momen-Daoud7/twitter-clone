@@ -9,26 +9,27 @@ import {
 import React from "react";
 import "./Post.css";
 
-const Post = ({ displayName, username, text, verified, image }) => {
+const Post = ({ displayName, username, text, verified, image, avatar }) => {
   return (
     <div className="post">
       <div className="post__avatar">
-        <Avatar src="./assets/steve.jpg" />
+        <Avatar src={avatar} />
       </div>
       <div className="post__body">
         <div className="post__header">
           <div className="post__headerText">
-            <h3>Momen Daoud {""}</h3>
+            <h3>
+              {displayName} {""}
+            </h3>
             <span className="post__headerSpecial">
-              <VerifiedUser className="post__badge" />
-              @momendaaoud
+              {verified && <VerifiedUser className="post__badge" />}@{username}
             </span>
           </div>
           <div className="post__headerDescription">
-            <p>I built up a twitter clone</p>
+            <p>{text}</p>
           </div>
         </div>
-        <img src="./assets/steve.jpg" alt="m" />
+        <img src={image} alt="m" />
         <div className="post__footer">
           <ChatBubbleOutline fontSize="small" />
           <Repeat fontSize="small" />

@@ -10,7 +10,62 @@ const Feed = () => {
         <h2>Home</h2>
       </div>
       <TweetBox />
-      <Post />
+      <Post
+        displayName="Momen Daodu"
+        username="momendaoud"
+        verified
+        text="Yooo i built a twitter clone"
+        image="./assets/steve.jpg"
+        avatar="./assets/steve.jpg"
+      />
+      <Post
+        displayName="Momen Daodu"
+        username="momendaoud"
+        verified
+        text="Yooo i built a twitter clone"
+        image="./assets/steve.jpg"
+        avatar="./assets/steve.jpg"
+      />
+      <Post
+        displayName="Momen Daodu"
+        username="momendaoud"
+        verified
+        text="Yooo i built a twitter clone"
+        image="./assets/steve.jpg"
+        avatar="./assets/steve.jpg"
+      />
+      <Post
+        displayName="Momen Daodu"
+        username="momendaoud"
+        verified
+        text="Yooo i built a twitter clone"
+        image="./assets/steve.jpg"
+        avatar="./assets/steve.jpg"
+      />
+      <Post
+        displayName="Momen Daodu"
+        username="momendaoud"
+        verified
+        text="Yooo i built a twitter clone"
+        image="./assets/steve.jpg"
+        avatar="./assets/steve.jpg"
+      />
+      <Post
+        displayName="Momen Daodu"
+        username="momendaoud"
+        verified
+        text="Yooo i built a twitter clone"
+        image="./assets/steve.jpg"
+        avatar="./assets/steve.jpg"
+      />
+      <Post
+        displayName="Momen Daodu"
+        username="momendaoud"
+        verified
+        text="Yooo i built a twitter clone"
+        image="./assets/steve.jpg"
+        avatar="./assets/steve.jpg"
+      />
     </div>
   );
 };
