@@ -1,0 +1,30 @@
+.feed {
+  flex-basis: 50%;
+  border-right: 1px solid var(--twitter-background);
+  overflow-y: scroll;
+}
+
+/* Hide from chrome , safari and opera */
+.feed::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide from IE , Edge and Firefox */
+.feed {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.feed__header {
+  position: sticky;
+  top: 0;
+  padding: 10px 15px;
+  background-color: white;
+  z-index: 100;
+  border: 1px solid var(--twitter-background);
+}
+
+.feed__header > h2 {
+  font-weight: 800;
+  font-size: 20px;
+}

@@ -1,0 +1,43 @@
+.tweetBox {
+  padding-bottom: 10x;
+  border-bottom: 8px solid var(--twitter-background);
+  padding-right: 10px;
+  margin-bottom: 25px;
+}
+
+.tweetBox > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweetBox__input {
+  padding: 20px;
+  display: flex;
+}
+
+.tweetBox__input > input {
+  border: none;
+  flex: 1;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.tweetBox__imageInput {
+  border: none;
+  outline: none;
+  padding: 20px;
+}
+
+.tweetBox__tweetButton {
+  background-color: var(--twitter-color) !important;
+  border: none !important;
+  border-radius: 999px !important;
+  padding: 10px 20px !important;
+  width: 80px !important;
+  color: white !important;
+  font-weight: 900 !important;
+  margin-top: 20px !important;
+  margin-bottom: 15px !important;
+  margin-left: auto !important;
+  text-transform: inherit !important;
+}
