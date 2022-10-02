@@ -4,6 +4,12 @@
   border-right: 1px solid var(--twitter-background);
 }
 
+@media (max-width: 800px) {
+  .sidebar {
+    display: none;
+  }
+}
+
 .sidebar__twitterIcon {
   font-size: 30px !important;
   color: var(--twitter-color) !important;

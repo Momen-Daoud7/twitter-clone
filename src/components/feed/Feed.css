@@ -4,6 +4,12 @@
   overflow-y: scroll;
 }
 
+@media (max-width: 800px) {
+  .feed {
+    flex-basis: 100%;
+  }
+}
+
 /* Hide from chrome , safari and opera */
 .feed::-webkit-scrollbar {
   display: none;

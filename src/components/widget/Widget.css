@@ -3,6 +3,12 @@
   overflow: scroll;
 }
 
+@media (max-width: 800px) {
+  .widgets {
+    display: none;
+  }
+}
+
 /* Hide from chrome , safari and opera */
 .widgets::-webkit-scrollbar {
   display: none;
