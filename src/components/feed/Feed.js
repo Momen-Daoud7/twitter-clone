@@ -20,8 +20,10 @@ const Feed = () => {
       </div>
       <TweetBox />
       {posts.map((post) => {
+        console.log(post);
         return (
           <Post
+            key={Math.random()}
             displayName={post.dispalyName}
             username={post.username}
             verified={post.verified}
