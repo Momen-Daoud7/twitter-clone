@@ -1,71 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import TweetBox from "./tweetBox/TweetBox";
 import "./Feed.css";
 import Post from "./post/Post";
+import db from "../../firebase/firebase";
 
 const Feed = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    db.collection("posts").onSnapshot((snapshot) => {
+      setPosts(snapshot.docs.map((doc) => doc.data()));
+    });
+  }, []);
+
   return (
     <div className="feed">
       <div className="feed__header">
         <h2>Home</h2>
       </div>
       <TweetBox />
-      <Post
-        displayName="Momen Daodu"
-        username="momendaoud"
-        verified
-        text="Yooo i built a twitter clone"
-        image="./assets/steve.jpg"
-        avatar="./assets/steve.jpg"
-      />
-      <Post
-        displayName="Momen Daodu"
-        username="momendaoud"
-        verified
-        text="Yooo i built a twitter clone"
-        image="./assets/steve.jpg"
-        avatar="./assets/steve.jpg"
-      />
-      <Post
-        displayName="Momen Daodu"
-        username="momendaoud"
-        verified
-        text="Yooo i built a twitter clone"
-        image="./assets/steve.jpg"
-        avatar="./assets/steve.jpg"
-      />
-      <Post
-        displayName="Momen Daodu"
-        username="momendaoud"
-        verified
-        text="Yooo i built a twitter clone"
-        image="./assets/steve.jpg"
-        avatar="./assets/steve.jpg"
-      />
-      <Post
-        displayName="Momen Daodu"
-        username="momendaoud"
-        verified
-        text="Yooo i built a twitter clone"
-        image="./assets/steve.jpg"
-        avatar="./assets/steve.jpg"
-      />
-      <Post
-        displayName="Momen Daodu"
-        username="momendaoud"
-        verified
-        text="Yooo i built a twitter clone"
-        image="./assets/steve.jpg"
-        avatar="./assets/steve.jpg"
-      />
-      <Post
-        displayName="Momen Daodu"
-        username="momendaoud"
-        verified
-        text="Yooo i built a twitter clone"
-        image="./assets/steve.jpg"
-        avatar="./assets/steve.jpg"
-      />
+      {posts.map((post) => {
+        return (
+          <Post
+            displayName={post.dispalyName}
+            username={post.username}
+            verified={post.verified}
+            text={post.text}
+            image={post.image}
+            avatar={post.avatar}
+          />
+        );
+      })}
     </div>
   );
 };
